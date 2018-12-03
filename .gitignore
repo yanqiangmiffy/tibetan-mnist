@@ -1,0 +1,8 @@
+.idea/
+*.zip
+.git/
+.ipynb_checkpoints/
+code/logs
+model/
+__pycache__/
+input/
