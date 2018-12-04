@@ -9,11 +9,10 @@ from keras.utils import np_utils
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
-import matplotlib.pyplot as plt
-
+from utils import draw_train
 data = np.load('input/TibetanMNIST.npz')
 X, y = data['image'], data['label']  # (17768, 28, 28)
-# print(X[0])
+print(X[0].shape)
 # plt.imshow(X[0],cmap='gray')
 # plt.show()
 
@@ -30,14 +29,14 @@ model.add(Dense(input_shape=(256,), units=10, activation='softmax',name='Dense3'
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.summary()
 from keras.utils import plot_model
-plot_model(model, to_file='assets/model.png',show_shapes=True)
+plot_model(model, to_file='assets/model_mlp.png',show_shapes=True)
 
-model.fit(x=X_train, y=y_train,
+history=model.fit(x=X_train, y=y_train,
           batch_size=128,
           epochs=20,
           verbose=1,
           validation_data=(X_test, y_test))
-
 evaluation = model.evaluate(X_test, y_test, verbose=1)
-
 print("loss:%.2f,accuracy:%.2f" % (evaluation[0], evaluation[1]))
+draw_train(history)
+
