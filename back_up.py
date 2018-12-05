@@ -1,8 +1,20 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2018/12/5 21:51
-# @Author  : quincyqiang
-# @File    : back_up.py
-# @Software: PyCharm
-
-if __name__ == '__main__':
-    pass
+# # input_shape=(28,28,1)
+# model=Sequential()
+# model.add(Conv2D(filters=32,kernel_size=(3,3),input_shape=input_shape,activation='relu'))
+# model.add(BatchNormalization())
+# model.add(Conv2D(filters=32,kernel_size=(3,3),activation='relu'))
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(BatchNormalization())
+#
+# model.add(Conv2D(filters=64,kernel_size=(3,3),activation='relu'))
+# model.add(BatchNormalization())
+# model.add(Conv2D(filters=64,kernel_size=(3,3),activation='relu'))
+# model.add(MaxPooling2D(pool_size=(2,2)))
+#
+# model.add(Flatten())
+# model.add(BatchNormalization())
+# model.add(Dense(512, activation='relu'))
+# model.add(Dropout(0.2))
+# model.add(Dense(n_classes, activation='softmax'))
+#
+# model.summary()
