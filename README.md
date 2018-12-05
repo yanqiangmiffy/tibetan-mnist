@@ -22,3 +22,6 @@ loss: 0.0269 - acc: 0.9910 - val_loss: 0.0560 - val_acc: 0.9829
 
 预测错误的情况：
 ![](https://github.com/yanqiangmiffy/tibetan/blob/master/assets/cnn_false.png)
+
+
+reference:https://www.one-tab.com/page/OeLJRrcFTW2DthBklKUMZw
