@@ -1,5 +1,5 @@
 # tibetan
-
+https://www.kesci.com/home/dataset/5bfe734a954d6e0010683839
 ## 模型测试
 
 - 3层全连接网络，两层Dropout
