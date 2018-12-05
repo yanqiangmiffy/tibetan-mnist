@@ -26,7 +26,7 @@ model.add(Dropout(0.2,name='Dropout1'))
 model.add(Dense(input_shape=(512,), units=256, activation='relu',name='Dense2'))
 model.add(Dropout(0.2,name='Dropout2'))
 model.add(Dense(input_shape=(256,), units=10, activation='softmax',name='Dense3'))
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 from keras.utils import plot_model
 plot_model(model, to_file='assets/model_mlp.png',show_shapes=True)
