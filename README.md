@@ -1,5 +1,7 @@
 # tibetan
 https://www.kesci.com/home/dataset/5bfe734a954d6e0010683839
+
+https://www.kesci.com/home/project/5c063da7f55a5f002b73d159
 ## 模型测试
 
 - 3层全连接网络，两层Dropout
@@ -12,7 +14,7 @@ https://www.kesci.com/home/dataset/5bfe734a954d6e0010683839
 
 - CNN
 
-可以达到98%的准确率
+可以达到99.10%的准确率
 ```text
 loss: 0.0269 - acc: 0.9910 - val_loss: 0.0560 - val_acc: 0.9829
 ```

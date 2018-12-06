@@ -17,6 +17,7 @@ from sklearn.model_selection import train_test_split
 from keras.optimizers import Adadelta
 import keras.backend as K
 import matplotlib.pyplot as plt
+from utils import *
 # 参数设置
 batch_size=128
 n_classes=10
@@ -53,15 +54,16 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(X_train, y_train,
+history=model.fit(X_train, y_train,
           batch_size=batch_size,
           epochs=n_epochs,
           verbose=1,
           validation_data=(X_test, y_test))
 
-score = model.evaluate(X_test, y_test, verbose=0)
-print('Test loss:', score[0])
-print('Test accuracy:', score[1])
+# 评估模型
+evaluation=model.evaluate(X_test,y_test)
+print('Summary: Loss over the test dataset: %.4f, Accuracy: %.4f' % (evaluation[0], evaluation[1]))
+draw_train(history)
 
 
 predicted_classes = model.predict_classes(X_test)
