@@ -27,3 +27,8 @@ loss: 0.0269 - acc: 0.9910 - val_loss: 0.0560 - val_acc: 0.9829
 
 
 reference:https://www.one-tab.com/page/OeLJRrcFTW2DthBklKUMZw
+
+## keras webapp
+
+在webapp目录下，运行train_lr.py和train_cnn.py训练模型，然后运行main.py启动web应用
+![](https://upload-images.jianshu.io/upload_images/1531909-b41b31a9e46aa5d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
